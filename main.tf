@@ -9,16 +9,21 @@ terraform {
 
 
 # Configure the AWS Provider
+#For access key create an IAM user and Give access to EC2 and then generate Acess keys and download the .CSV file#
+
 provider "aws" {
-  region     = "us-west-2"
-  access_key = "AKIAWTQMRNHLG3VNXMEU"
-  secret_key = "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"
+  region     = "Enter the region which you need"
+  access_key = ""
+  secret_key = ""
 }
 
 # Create EC2 instance in us-west-2
+#Choose the instance type you need and make sure it is free tier eligible
+#copy the ami and make sure you are in the same region that you have given, while copying the ami
+
 resource "aws_instance" "tfDemoInstance" {
-  ami           = "ami-0872c164f38dcc49f"
-  instance_type = "t2.micro"
+  ami           = ""
+  instance_type = ""
 
   tags = {
     Name = "Terraform Demo Instance"
